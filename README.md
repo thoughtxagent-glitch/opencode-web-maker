@@ -1,11 +1,11 @@
-# 🚀 WEB — Master Full-Stack Web Architect AI Agent & CLI
+# 🚀 WEBCODE — Master Full-Stack Web Architect AI Agent & CLI Setup
 
-Repository ini adalah pusat **Master Skill Arsenal & Knowledge Base (300+ KB, 15 Modul Rekayasa Web)** untuk AI Agent **`WEB`** di OpenCode.
+Repository ini berisi installer & pusat **Master Skill Arsenal & Knowledge Base (300+ KB, 15 Modul Rekayasa Web)** untuk AI Agent **`WEB`** dalam tampilan CLI **`WEBCODE`**.
 
 ---
 
 ## 🌟 Fitur Utama
-1. **Shortcut Executable `web`**: Cukup ketik **`web`** di terminal untuk membuka CLI!
+1. **Perintah Executable `webcode`**: Cukup ketik **`webcode`** (atau `web`) di terminal untuk membuka CLI!
 2. **Tab Navigation Mode**: Mode `build` disembunyikan (disabled). Saat menekan **Tab**, yang aktif hanya **`plan`** dan **`WEB`**!
 3. **15 Deep Knowledge Modules (300+ KB)**: Berisi ribuan standar rekayasa web dari UI/UX, Frontend, Backend, Database, Realtime API, Security OWASP, Testing, Performance, hingga Architecture Patterns.
 
@@ -29,7 +29,7 @@ chmod +x install.sh
 
 Jalankan perintah ini di terminal:
 ```bash
-web
+webcode
 ```
 Tekan **`Tab`** untuk berpindah mode antara **`plan`** ➔ **`WEB`**!
 
@@ -40,7 +40,7 @@ Tekan **`Tab`** untuk berpindah mode antara **`plan`** ➔ **`WEB`**!
 Setiap modul di folder `knowledge/` berisi panduan mendalam untuk rekayasa web kelas dunia:
 
 1. `knowledge/WEBSITE-KNOWLEDGE-INDEX.md` — Master Index & Pre-flight Checklists.
-2. `knowledge/master-web-architect.md` — Philosophy Anti-AI-Slop & Core Web Architect Playbook.
+2. `knowledge/master-web-architect.md` — Philosophy Anti-AI-Slop & Playbook Master Web.
 3. `knowledge/frontend-uiux-mastery.md` — Bento Grids, Dark Neobrutalism, OKLCH, WCAG AAA.
 4. `knowledge/frontend-advanced-mastery.md` — React 18/19, RSC, Server Actions, Zustand, React Query.
 5. `knowledge/creative-coding-mastery.md` — p5.js, WebGL Shaders, Particle Canvas, Interactive SVG.

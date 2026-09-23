@@ -2,7 +2,7 @@
 
 set -e
 
-echo "🚀 Installing WEB CLI, Agent & Knowledge Base for OpenCode..."
+echo "🚀 Installing WEBCODE CLI, Agent & Knowledge Base..."
 
 # 1. Create target directories
 CONFIG_DIR="$HOME/.config/opencode"
@@ -54,16 +54,22 @@ else
 JSONEOF
 fi
 
-# 4. Create binary shortcut `web` in ~/.local/bin/web
+# 4. Create binary shortcuts `webcode` & `web` in ~/.local/bin/
+cat << 'BINEOF' > "$BIN_DIR/webcode"
+#!/usr/bin/env bash
+exec opencode "$@"
+BINEOF
+
 cat << 'BINEOF' > "$BIN_DIR/web"
 #!/usr/bin/env bash
 exec opencode "$@"
 BINEOF
 
+chmod +x "$BIN_DIR/webcode"
 chmod +x "$BIN_DIR/web"
 
-echo "✅ SUCCESS! WEB AI Agent & Skill Knowledge Base (15 Deep Engineering Modules) is now installed!"
+echo "✅ SUCCESS! WEBCODE AI Agent & Skill Knowledge Base (15 Deep Engineering Modules) is now installed!"
 echo ""
 echo "📌 Usage:"
-echo "   Ketik 'web' di terminal untuk menjalankan CLI!"
+echo "   Ketik 'webcode' (atau 'web') di terminal untuk menjalankan CLI!"
 echo "   Saat di dalam CLI, tekan TAB untuk beralih mode (Hanya ada mode 'plan' & 'WEB', mode 'build' disembunyikan!)."
