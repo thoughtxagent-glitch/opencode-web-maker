@@ -4,13 +4,13 @@ set -e
 
 echo "🚀 Installing WEBCODE CLI, Agent & Knowledge Base..."
 
-# 1. Create target directories
+# 1. Determine bin directory (Fallback to /usr/local/bin if writable or ~/.local/bin)
 CONFIG_DIR="$HOME/.config/opencode"
 AGENT_DIR="$CONFIG_DIR/agent"
-BIN_DIR="$HOME/.local/bin"
+LOCAL_BIN="$HOME/.local/bin"
 
 mkdir -p "$AGENT_DIR"
-mkdir -p "$BIN_DIR"
+mkdir -p "$LOCAL_BIN"
 
 # 2. Install web.md agent
 cp -f web.md "$AGENT_DIR/web.md"
@@ -54,22 +54,41 @@ else
 JSONEOF
 fi
 
-# 4. Create binary shortcuts `webcode` & `web` in ~/.local/bin/
-cat << 'BINEOF' > "$BIN_DIR/webcode"
+# 4. Create binary shortcuts in ~/.local/bin/ AND try /usr/local/bin/ (with sudo if needed/available)
+cat << 'BINEOF' > "$LOCAL_BIN/webcode"
 #!/usr/bin/env bash
 exec opencode "$@"
 BINEOF
 
-cat << 'BINEOF' > "$BIN_DIR/web"
+cat << 'BINEOF' > "$LOCAL_BIN/web"
 #!/usr/bin/env bash
 exec opencode "$@"
 BINEOF
 
-chmod +x "$BIN_DIR/webcode"
-chmod +x "$BIN_DIR/web"
+chmod +x "$LOCAL_BIN/webcode"
+chmod +x "$LOCAL_BIN/web"
 
-echo "✅ SUCCESS! WEBCODE AI Agent & Skill Knowledge Base (15 Deep Engineering Modules) is now installed!"
+# Try copying to /usr/local/bin if possible
+if [ -w "/usr/local/bin" ]; then
+    cp -f "$LOCAL_BIN/webcode" /usr/local/bin/webcode
+    cp -f "$LOCAL_BIN/web" /usr/local/bin/web
+elif command -v sudo >/dev/null 2>&1; then
+    sudo cp -f "$LOCAL_BIN/webcode" /usr/local/bin/webcode 2>/dev/null || true
+    sudo cp -f "$LOCAL_BIN/web" /usr/local/bin/web 2>/dev/null || true
+fi
+
+# 5. Add ~/.local/bin to PATH in shell config files if missing
+for RCFILE in "$HOME/.bashrc" "$HOME/.zshrc" "$HOME/.profile"; do
+    if [ -f "$RCFILE" ]; then
+        if ! grep -q 'export PATH="$HOME/.local/bin:$PATH"' "$RCFILE"; then
+            echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$RCFILE"
+        fi
+    fi
+done
+
+echo "✅ SUCCESS! WEBCODE is now installed."
 echo ""
-echo "📌 Usage:"
-echo "   Ketik 'webcode' (atau 'web') di terminal untuk menjalankan CLI!"
-echo "   Saat di dalam CLI, tekan TAB untuk beralih mode (Hanya ada mode 'plan' & 'WEB', mode 'build' disembunyikan!)."
+echo "📌 Catatan Penting:"
+echo "   1. Jika 'webcode' belum bisa diketik langsung, jalankan dulu:"
+echo "      source ~/.bashrc  (atau source ~/.zshrc)"
+echo "   2. Setelah itu, ketik 'webcode' di terminal!"
