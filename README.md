@@ -1,145 +1,74 @@
-# 🚀 OpenCode `web.maker` (`web`) Custom Agent & Complete Blueprint
+# 🚀 WEB — Ultimate OpenCode Agent & CLI Setup
 
-Welcome to the **`web.maker`** agent for OpenCode — the ultimate **Master Full-Stack Web Architect & Senior Design Engineer** agent.
-
-When enabled, pressing **Tab** in OpenCode toggles between **`build`**, **`plan`**, and **`web`**!
+Repository ini berisi installer & agent **`WEB`** (Custom Agent OpenCode) yang dirancang khusus sebagai **Master Full-Stack Web Architect & Senior Design Engineer**.
 
 ---
 
-## 🌟 Quick Installation into OpenCode
+## 🌟 Fitur Utama
+1. **Shortcut Executable `web`**: Setelah diunduh & diinstall, kamu tinggal mengetik **`web`** di terminal untuk menjalankan CLI!
+2. **Mode Tab Navigation**: Mode `build` disembunyikan (disabled). Saat kamu menekan **Tab** di CLI, yang muncul hanya **`plan`** dan **`web`**!
+3. **Arsenal Skill Web Lengkap**: Memiliki panduan lengkap & system prompt super rinci untuk Frontend (Bento Grid, Glassmorphism, OKLCH, Framer Motion), Backend (Clean Architecture, Zod, tRPC, WebSockets), Database, Security (OWASP Top 10), dan DevOps.
 
-To install `web.maker` globally in your OpenCode environment:
+---
+
+## ⚡ Cara Unduh & Install (Quick Setup)
+
+Cukup clone repository ini dan jalankan `install.sh`:
 
 ```bash
-mkdir -p ~/.config/opencode/agent
-cp .opencode/agent/web.md ~/.config/opencode/agent/web.md
+# 1. Clone repo ini
+git clone https://github.com/thoughtxagent-glitch/opencode-web-maker.git
+cd opencode-web-maker
+
+# 2. Jalankan script installer
+chmod +x install.sh
+./install.sh
 ```
 
-Then run `opencode` and hit **`Tab`** to switch to the **`web`** mode!
-
 ---
 
-# 📚 COMPLETE 360° WEB ARCHITECTURE MANUAL & BLUEPRINT
+## 🚀 Cara Pakai
 
-`web.maker` operates under strict engineering and visual design guidelines. Zero AI-slop, 100% production-grade type-safe code.
+Setelah instalasi selesai, kamu tinggal menjalankan perintah ini di terminal:
 
----
-
-## 🎨 1. VISUAL AESTHETICS & FRONTEND EXCELLENCE (Anti-AI-Slop Standard)
-
-### 🚫 Banned AI-Slop Aesthetics
-- **NO Default Indigo/Purple Gradients**: Banned generic AI gradient backgrounds.
-- **NO Un-tweaked Inter Font**: Inter font polosan without custom `letter-spacing`, `font-weight` hierarchy, and proper font pairings is strictly prohibited.
-- **NO Standard 3-Card Hero Layout**: Banned repetitive 3-box feature sections.
-
-### ✨ Surface Archetype & Design Systems
-- **Bento Grid 2.0 Layouts**: Modular, multi-aspect-ratio grids inspired by Vercel, Linear, Apple, and Notion.
-- **Glassmorphism 2.0 & Dark Neobrutalism**: Multi-layered backdrop blurs (`backdrop-blur-md` to `xl`), hairline subtle borders (`border-white/10`), inset glow, crisp shadows, and tactical micro-badges.
-- **OKLCH Color Space**: Perceptually uniform color palettes, rich saturation, and **100% WCAG AAA** contrast compliance.
-
-### 🎭 Micro-Interactions & Creative Coding
-- **Framer Motion**: Smooth page transitions, scroll animations, dynamic spring physics, and shared layout animations (`layoutId`).
-- **Canvas Shaders & Particles**: Interactive background graphics via **p5.js**, **Three.js**, or native **WebGL shaders**.
-- **Dynamic Interactive SVGs**: Dark-themed architecture diagrams with glowing animated path strokes.
-
-### ⚛️ Modern Tech Stack Frontend
-- **Frameworks**: Next.js 14/15 (App Router, Server Components, Server Actions), React 19, Vue/Nuxt 3, SvelteKit, Vite.
-- **Styling**: Tailwind CSS v4, Radix UI Primitives, Shadcn/ui, CSS Modules.
-- **State & Data**: Zustand, TanStack React Query, Redux Toolkit, Jotai.
-
----
-
-## ⚡ 2. HIGH-PERFORMANCE & CLEAN BACKEND ARCHITECTURE
-
-### 🧱 Modular Layered Architecture (Separation of Concerns)
-Strict directory structure:
-```text
-src/
-├── config/         # Environment variables, DB connections, CORS, Auth config
-├── controllers/    # Request/Response handling (HTTP layer only)
-├── services/       # Business logic layer
-├── repositories/   # Direct Database Queries (ORM / Raw SQL)
-├── middlewares/    # Auth check, Rate limiting, Error handling, Logging
-├── schemas/        # Zod / TypeBox DTO validation schemas
-├── routes/         # Endpoint route definitions
-├── types/          # Shared TypeScript interfaces & types
-└── utils/          # Logger (Pino/Winston), Helper functions
+```bash
+web
 ```
-- **Controllers**: Only handle HTTP I/O.
-- **Services**: Contain pure business logic.
-- **Repositories**: Handle database interactions exclusively.
 
-### 🛡️ End-to-End Type Safety & Data Integrity
-- Complete schema validation using **Zod** or **TypeBox** for `req.body`, `req.query`, and `req.params`.
-- Contract-first API development using **tRPC** or **OpenAPI / Swagger** generated clients.
-
-### 🚀 Runtimes & Frameworks Supported
-- **Node.js & Bun**: Fastify (high throughput), Express.js, NestJS (Enterprise Modular), Hono.
-- **Python**: FastAPI (async, auto OpenAPI generation).
-- **Go**: Fiber / Gin (microsecond performance).
-- **Realtime & Streaming**: WebSockets (Socket.io / ws), Server-Sent Events (SSE), AI Response Streaming.
+Saat di dalam CLI:
+- Tekan **`Tab`** untuk beralih mode.
+- Mode yang aktif hanya **`plan`** dan **`web`**!
 
 ---
 
-## 🗄️ 3. DATABASE ARCHITECTURE & OPTIMIZATION
+# 📚 MANUAL & SKILL ARSENAL LENGKAP AGENT `WEB`
 
+Agent **`WEB`** beroperasi di bawah standar desain dan rekayasa web berikut (100% Zero AI-Slop):
+
+### 🎨 1. FRONTEND EXCELLENCE (Anti-AI-Slop Standard)
+- **Banned AI-Slop Aesthetics**: No default Indigo/Purple gradients, no un-tweaked Inter font polosan, no boring 3-card hero layouts.
+- **Surface Systems**: Bento Grid 2.0 Layouts, Glassmorphism 2.0 & Dark Neobrutalism, OKLCH Color Space (100% WCAG AAA Compliance).
+- **Micro-Interactions**: Framer Motion, p5.js / Three.js / WebGL particle canvas shaders, Interactive SVGs.
+- **Tech Stack**: Next.js 14/15 (App Router, RSC, Server Actions), React 19, Vue/Nuxt 3, SvelteKit, Tailwind CSS v4, Radix UI, Shadcn/ui, Zustand, TanStack Query.
+
+### ⚡ 2. HIGH-PERFORMANCE BACKEND ARCHITECTURE
+- **Modular Directory Structure**: `routes/` ➔ `controllers/` ➔ `services/` ➔ `repositories/` ➔ `middlewares/` ➔ `schemas/` ➔ `types/`.
+- **End-to-End Type Safety**: Zod / TypeBox DTO validation, tRPC / OpenAPI clients.
+- **Runtimes & Frameworks**: Node.js & Bun (Fastify, Express, NestJS, Hono), Python (FastAPI), Go (Fiber/Gin), WebSockets & SSE.
+
+### 🗄️ 3. DATABASE ARCHITECTURE & OPTIMIZATION
 - **Databases**: PostgreSQL, MySQL, SQLite, MongoDB, Redis.
-- **ORMs & Query Builders**: Drizzle ORM, Prisma, Kysely, TypeORM.
-- **Query & Storage Optimization**:
-  - Proper index design (`B-Tree`, `GIN` for JSONB/Full-Text Search).
-  - Advanced SQL: Window Functions, Common Table Expressions (CTEs), Subqueries.
-  - Redis In-Memory Caching Strategy (Cache-Aside, Write-Through, TTL invalidation).
-  - Database Migrations: Zero-downtime **Expand-Contract** pattern.
+- **ORMs & Tools**: Drizzle ORM, Prisma, Kysely, TypeORM.
+- **Optimization**: B-Tree & GIN indexing, SQL Window Functions & CTEs, Redis Caching, Zero-downtime Expand-Contract migrations.
+
+### 🛡️ 4. OWASP TOP 10 SECURITY HARDENING
+- **Auth**: JWT RS256 rotation, HttpOnly/Secure/SameSite=Strict Cookies, OAuth2.
+- **Protection**: Helmet security headers, Redis Sliding-Window Rate Limiting, Input Sanitization (Zero SQLi/XSS).
+
+### 🚀 5. DEVOPS, TESTING & PERFORMANCE
+- **Core Web Vitals**: LCP < 1.2s, CLS 0.00, INP < 50ms.
+- **Testing**: Jest, Vitest, Playwright E2E, MSW, k6 load testing.
+- **Deployment**: Multi-stage `Dockerfile`, `docker-compose.yml`, Vercel, Cloudflare, Nginx.
 
 ---
-
-## 🛡️ 4. OWASP TOP 10 SECURITY HARDENING
-
-- **Authentication & Authorization**:
-  - JWT with **RS256 Asymmetric Key Rotation** (Private key signs on server, Public key verifies).
-  - Session tokens stored exclusively in `HttpOnly`, `Secure`, `SameSite=Strict` Cookies.
-  - OAuth2 integration (Google, GitHub), Auth.js / NextAuth, Clerk, Supabase Auth.
-- **API Protection & Defense**:
-  - **Helmet.js** security headers (`X-Content-Type-Options`, `X-Frame-Options`, `Content-Security-Policy`).
-  - **Rate Limiting**: Sliding window rate-limiting per IP/token using Redis.
-  - **Input Sanitization**: Parameterized ORM queries (Zero SQL Injection) and XSS prevention.
-
----
-
-## 🚀 5. DEVOPS, TESTING & PERFORMANCE OPTIMIZATION
-
-### 📊 Core Web Vitals Enforcement
-- **LCP (Largest Contentful Paint)**: `< 1.2s` via image optimization & dynamic code splitting.
-- **CLS (Cumulative Layout Shift)**: `0.00` via reserved layout aspect ratios & skeleton loaders.
-- **INP (Interaction to Next Paint)**: `< 50ms` via debounced handlers & non-blocking renders.
-
-### 🧪 Automated Testing Suite
-- **Unit & Integration**: Jest, Vitest, React Testing Library (RTL).
-- **End-to-End (E2E)**: Playwright / Cypress.
-- **Load Testing & Mocking**: MSW (Mock Service Worker), **k6** load testing scripts.
-
-### 🐳 Containerization & Deployment
-- Multi-stage `Dockerfile` (ultra-small runtime images ~50MB).
-- `docker-compose.yml` (App + Database + Redis + Nginx Reverse Proxy).
-- One-click deployment pipelines for Vercel, Cloudflare Workers, AWS, Netlify, or VPS Docker via GitHub Actions.
-
----
-
-## 📋 6. STEP-BY-STEP WORKFLOW
-
-```text
-[ Phase 1: Planning ] ──> Define Architecture, Tech Stack & Design Tokens
-         │
-[ Phase 2: Backend ]  ──> DB Schema ➔ Migration ➔ Zod Validation ➔ API Routes ➔ Auth Middleware
-         │
-[ Phase 3: Frontend ] ──> Design System ➔ Bento Layout ➔ OKLCH Colors ➔ Hero Particle/Canvas ➔ Components
-         │
-[ Phase 4: Integrasi ]──> Type-safe Client ➔ State Mgmt (Zustand/Query) ➔ Micro-interactions
-         │
-[ Phase 5: Security ] ──> Helmet ➔ CORS ➔ Rate Limit ➔ HttpOnly Cookie Audit ➔ OWASP Check
-         │
-[ Phase 6: Launch ]   ──> Core Web Vitals Check ➔ Docker Build ➔ Deployment! 🚀
-```
-
----
-*Powered by Bxploit & OpenCode Architecture.*
+*Powered by Bxploit Architecture.*
