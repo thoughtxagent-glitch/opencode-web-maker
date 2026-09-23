@@ -2,7 +2,7 @@
 
 set -e
 
-echo "🚀 Installing WEB CLI & Agent for OpenCode..."
+echo "🚀 Installing WEB CLI, Agent & Knowledge Base for OpenCode..."
 
 # 1. Create target directories
 CONFIG_DIR="$HOME/.config/opencode"
@@ -19,16 +19,13 @@ cp -f web.md "$AGENT_DIR/web.md"
 CONFIG_FILE="$CONFIG_DIR/opencode.jsonc"
 
 if [ -f "$CONFIG_FILE" ]; then
-    # Add agent.build.disable = true if jsonc exists
     python3 -c "
-import json
+import json, re
 
 path = '$CONFIG_FILE'
 try:
     with open(path, 'r') as f:
         content = f.read()
-    # Strip comments if any or parse json
-    import re
     cleaned = re.sub(r'//.*', '', content)
     cleaned = re.sub(r'/\*.*?\*/', '', cleaned, flags=re.DOTALL)
     data = json.loads(cleaned) if cleaned.strip() else {}
@@ -65,8 +62,8 @@ BINEOF
 
 chmod +x "$BIN_DIR/web"
 
-echo "✅ SUCCESS! WEB is now installed."
+echo "✅ SUCCESS! WEB AI Agent & Skill Knowledge Base (15 Deep Engineering Modules) is now installed!"
 echo ""
 echo "📌 Usage:"
 echo "   Ketik 'web' di terminal untuk menjalankan CLI!"
-echo "   Saat di dalam CLI, tekan TAB untuk beralih mode (Hanya ada mode 'plan' & 'web', mode 'build' disembunyikan!)."
+echo "   Saat di dalam CLI, tekan TAB untuk beralih mode (Hanya ada mode 'plan' & 'WEB', mode 'build' disembunyikan!)."

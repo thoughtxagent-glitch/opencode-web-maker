@@ -1,22 +1,20 @@
-# 🚀 WEB — Ultimate OpenCode Agent & CLI Setup
+# 🚀 WEB — Master Full-Stack Web Architect AI Agent & CLI
 
-Repository ini berisi installer & agent **`WEB`** (Custom Agent OpenCode) yang dirancang khusus sebagai **Master Full-Stack Web Architect & Senior Design Engineer**.
+Repository ini adalah pusat **Master Skill Arsenal & Knowledge Base (300+ KB, 15 Modul Rekayasa Web)** untuk AI Agent **`WEB`** di OpenCode.
 
 ---
 
 ## 🌟 Fitur Utama
-1. **Shortcut Executable `web`**: Setelah diunduh & diinstall, kamu tinggal mengetik **`web`** di terminal untuk menjalankan CLI!
-2. **Mode Tab Navigation**: Mode `build` disembunyikan (disabled). Saat kamu menekan **Tab** di CLI, yang muncul hanya **`plan`** dan **`web`**!
-3. **Arsenal Skill Web Lengkap**: Memiliki panduan lengkap & system prompt super rinci untuk Frontend (Bento Grid, Glassmorphism, OKLCH, Framer Motion), Backend (Clean Architecture, Zod, tRPC, WebSockets), Database, Security (OWASP Top 10), dan DevOps.
+1. **Shortcut Executable `web`**: Cukup ketik **`web`** di terminal untuk membuka CLI!
+2. **Tab Navigation Mode**: Mode `build` disembunyikan (disabled). Saat menekan **Tab**, yang aktif hanya **`plan`** dan **`WEB`**!
+3. **15 Deep Knowledge Modules (300+ KB)**: Berisi ribuan standar rekayasa web dari UI/UX, Frontend, Backend, Database, Realtime API, Security OWASP, Testing, Performance, hingga Architecture Patterns.
 
 ---
 
-## ⚡ Cara Unduh & Install (Quick Setup)
-
-Cukup clone repository ini dan jalankan `install.sh`:
+## ⚡ Quick Setup (Cara Download & Install)
 
 ```bash
-# 1. Clone repo ini
+# 1. Clone repository ini
 git clone https://github.com/thoughtxagent-glitch/opencode-web-maker.git
 cd opencode-web-maker
 
@@ -29,46 +27,33 @@ chmod +x install.sh
 
 ## 🚀 Cara Pakai
 
-Setelah instalasi selesai, kamu tinggal menjalankan perintah ini di terminal:
-
+Jalankan perintah ini di terminal:
 ```bash
 web
 ```
-
-Saat di dalam CLI:
-- Tekan **`Tab`** untuk beralih mode.
-- Mode yang aktif hanya **`plan`** dan **`web`**!
+Tekan **`Tab`** untuk berpindah mode antara **`plan`** ➔ **`WEB`**!
 
 ---
 
-# 📚 MANUAL & SKILL ARSENAL LENGKAP AGENT `WEB`
+# 📚 KNOWLEDGE MODULES REGISTRY (15 MODUL)
 
-Agent **`WEB`** beroperasi di bawah standar desain dan rekayasa web berikut (100% Zero AI-Slop):
+Setiap modul di folder `knowledge/` berisi panduan mendalam untuk rekayasa web kelas dunia:
 
-### 🎨 1. FRONTEND EXCELLENCE (Anti-AI-Slop Standard)
-- **Banned AI-Slop Aesthetics**: No default Indigo/Purple gradients, no un-tweaked Inter font polosan, no boring 3-card hero layouts.
-- **Surface Systems**: Bento Grid 2.0 Layouts, Glassmorphism 2.0 & Dark Neobrutalism, OKLCH Color Space (100% WCAG AAA Compliance).
-- **Micro-Interactions**: Framer Motion, p5.js / Three.js / WebGL particle canvas shaders, Interactive SVGs.
-- **Tech Stack**: Next.js 14/15 (App Router, RSC, Server Actions), React 19, Vue/Nuxt 3, SvelteKit, Tailwind CSS v4, Radix UI, Shadcn/ui, Zustand, TanStack Query.
-
-### ⚡ 2. HIGH-PERFORMANCE BACKEND ARCHITECTURE
-- **Modular Directory Structure**: `routes/` ➔ `controllers/` ➔ `services/` ➔ `repositories/` ➔ `middlewares/` ➔ `schemas/` ➔ `types/`.
-- **End-to-End Type Safety**: Zod / TypeBox DTO validation, tRPC / OpenAPI clients.
-- **Runtimes & Frameworks**: Node.js & Bun (Fastify, Express, NestJS, Hono), Python (FastAPI), Go (Fiber/Gin), WebSockets & SSE.
-
-### 🗄️ 3. DATABASE ARCHITECTURE & OPTIMIZATION
-- **Databases**: PostgreSQL, MySQL, SQLite, MongoDB, Redis.
-- **ORMs & Tools**: Drizzle ORM, Prisma, Kysely, TypeORM.
-- **Optimization**: B-Tree & GIN indexing, SQL Window Functions & CTEs, Redis Caching, Zero-downtime Expand-Contract migrations.
-
-### 🛡️ 4. OWASP TOP 10 SECURITY HARDENING
-- **Auth**: JWT RS256 rotation, HttpOnly/Secure/SameSite=Strict Cookies, OAuth2.
-- **Protection**: Helmet security headers, Redis Sliding-Window Rate Limiting, Input Sanitization (Zero SQLi/XSS).
-
-### 🚀 5. DEVOPS, TESTING & PERFORMANCE
-- **Core Web Vitals**: LCP < 1.2s, CLS 0.00, INP < 50ms.
-- **Testing**: Jest, Vitest, Playwright E2E, MSW, k6 load testing.
-- **Deployment**: Multi-stage `Dockerfile`, `docker-compose.yml`, Vercel, Cloudflare, Nginx.
+1. `knowledge/WEBSITE-KNOWLEDGE-INDEX.md` — Master Index & Pre-flight Checklists.
+2. `knowledge/master-web-architect.md` — Philosophy Anti-AI-Slop & Core Web Architect Playbook.
+3. `knowledge/frontend-uiux-mastery.md` — Bento Grids, Dark Neobrutalism, OKLCH, WCAG AAA.
+4. `knowledge/frontend-advanced-mastery.md` — React 18/19, RSC, Server Actions, Zustand, React Query.
+5. `knowledge/creative-coding-mastery.md` — p5.js, WebGL Shaders, Particle Canvas, Interactive SVG.
+6. `knowledge/backend-fullstack-mastery.md` — REST/GraphQL debug, Sintesis 54 Design Systems.
+7. `knowledge/database-schema-sql-mastery.md` — PostgreSQL Deep Dive, Indexing, CTEs, Redis.
+8. `knowledge/realtime-api-patterns-mastery.md` — WebSocket, SSE, AI Response Streaming, tRPC.
+9. `knowledge/security-web-mastery.md` — OWASP Top 10 Fixes, JWT RS256 rotation, Helmet, Rate Limiting.
+10. `knowledge/payment-stripe-mastery.md` — Stripe Checkout/Elements, Webhooks, Billing DB, Feature Gating.
+11. `knowledge/testing-performance-mastery.md` — Jest, RTL, Playwright E2E, MSW, k6 Load Testing.
+12. `knowledge/performance-optimization-mastery.md` — Core Web Vitals (LCP, CLS, INP), Bundle Opt, Next Cache.
+13. `knowledge/architecture-patterns-mastery.md` — Tech Stack Framework, Monorepo Turborepo, DDD.
+14. `knowledge/devops-deployment-mastery.md` — Docker Multi-stage, Nginx, CI/CD, Cloudflare.
+15. `knowledge/pwa-a11y-seo-mastery.md` — PWA Service Workers, Accessibility & Modern SEO.
 
 ---
-*Powered by Bxploit Architecture.*
+*Powered by Bxploit Web Architecture System.*
