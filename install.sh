@@ -2,9 +2,9 @@
 
 set -e
 
-echo "🚀 Installing WEBCODE CLI, Agent & Knowledge Base..."
+echo "🚀 Installing WEBCODE CLI, Agents (web, bx) & Knowledge Base..."
 
-# 1. Determine bin directory (Fallback to /usr/local/bin if writable or ~/.local/bin)
+# 1. Create target directories
 CONFIG_DIR="$HOME/.config/opencode"
 AGENT_DIR="$CONFIG_DIR/agent"
 LOCAL_BIN="$HOME/.local/bin"
@@ -12,8 +12,9 @@ LOCAL_BIN="$HOME/.local/bin"
 mkdir -p "$AGENT_DIR"
 mkdir -p "$LOCAL_BIN"
 
-# 2. Install web.md agent
+# 2. Install web.md & bx.md agents
 cp -f web.md "$AGENT_DIR/web.md"
+cp -f bx.md "$AGENT_DIR/bx.md"
 
 # 3. Disable default 'build' agent in opencode.jsonc
 CONFIG_FILE="$CONFIG_DIR/opencode.jsonc"
@@ -54,7 +55,7 @@ else
 JSONEOF
 fi
 
-# 4. Create binary shortcuts in ~/.local/bin/ AND try /usr/local/bin/ (with sudo if needed/available)
+# 4. Create binary shortcuts in ~/.local/bin/ AND /usr/local/bin/
 cat << 'BINEOF' > "$LOCAL_BIN/webcode"
 #!/usr/bin/env bash
 exec opencode "$@"
@@ -65,16 +66,23 @@ cat << 'BINEOF' > "$LOCAL_BIN/web"
 exec opencode "$@"
 BINEOF
 
+cat << 'BINEOF' > "$LOCAL_BIN/bx"
+#!/usr/bin/env bash
+exec opencode "$@"
+BINEOF
+
 chmod +x "$LOCAL_BIN/webcode"
 chmod +x "$LOCAL_BIN/web"
+chmod +x "$LOCAL_BIN/bx"
 
-# Try copying to /usr/local/bin if possible
 if [ -w "/usr/local/bin" ]; then
     cp -f "$LOCAL_BIN/webcode" /usr/local/bin/webcode
     cp -f "$LOCAL_BIN/web" /usr/local/bin/web
+    cp -f "$LOCAL_BIN/bx" /usr/local/bin/bx
 elif command -v sudo >/dev/null 2>&1; then
     sudo cp -f "$LOCAL_BIN/webcode" /usr/local/bin/webcode 2>/dev/null || true
     sudo cp -f "$LOCAL_BIN/web" /usr/local/bin/web 2>/dev/null || true
+    sudo cp -f "$LOCAL_BIN/bx" /usr/local/bin/bx 2>/dev/null || true
 fi
 
 # 5. Add ~/.local/bin to PATH in shell config files if missing
@@ -86,9 +94,7 @@ for RCFILE in "$HOME/.bashrc" "$HOME/.zshrc" "$HOME/.profile"; do
     fi
 done
 
-echo "✅ SUCCESS! WEBCODE is now installed."
+echo "✅ SUCCESS! WEBCODE Agents (plan, web, bx) installed successfully!"
 echo ""
-echo "📌 Catatan Penting:"
-echo "   1. Jika 'webcode' belum bisa diketik langsung, jalankan dulu:"
-echo "      source ~/.bashrc  (atau source ~/.zshrc)"
-echo "   2. Setelah itu, ketik 'webcode' di terminal!"
+echo "📌 Modus Tab Navigation saat 'webcode' dibuka:"
+echo "   Tekan TAB untuk beralih mode ➔ 'plan' ➔ 'web' ➔ 'bx' ('build' disembunyikan!)"

@@ -1,13 +1,37 @@
-# 🚀 WEBCODE — Master Full-Stack Web Architect AI Agent & CLI Setup
+# 🚀 WEBCODE — Master Full-Stack Web Architect & Bxploit Pentest AI Agents
 
-Repository ini berisi installer & pusat **Master Skill Arsenal & Knowledge Base (300+ KB, 15 Modul Rekayasa Web)** untuk AI Agent **`WEB`** dalam tampilan CLI **`WEBCODE`**.
+Repository ini berisi installer & pusat **Skill Arsenal & Knowledge Base (300+ KB, 15 Modul Rekayasa Web + Pentesting)** untuk AI Agent **`web`** (Web Architecture) dan **`bx`** (Bxploit Penetration Testing).
 
 ---
 
-## 🌟 Fitur Utama
-1. **Perintah Executable `webcode`**: Cukup ketik **`webcode`** (atau `web`) di terminal untuk membuka CLI!
-2. **Tab Navigation Mode**: Mode `build` disembunyikan (disabled). Saat menekan **Tab**, yang aktif hanya **`plan`** dan **`WEB`**!
-3. **15 Deep Knowledge Modules (300+ KB)**: Berisi ribuan standar rekayasa web dari UI/UX, Frontend, Backend, Database, Realtime API, Security OWASP, Testing, Performance, hingga Architecture Patterns.
+## 🌟 Fitur Navigation & Modes
+1. **Shortcut Perintah Executable**: Cukup ketik **`webcode`** (atau `web` / `bx`) di terminal untuk menjalankan CLI!
+2. **3-Mode Tab Navigation**:
+   - Mode `build` disembunyikan (*disabled*).
+   - Tekan **`Tab`** di terminal untuk beralih mode secara seamless:
+     👉 **`plan`** (Implementation Planning) ➔ **`web`** (Full-Stack Web Architect) ➔ **`bx`** (Bxploit Penetration Testing & Vulnerability Research)!
+
+---
+
+## 🛠️ Ringkasan 3 Mode Utama
+
+### 📋 1. Mode `plan` (Architecture & Planning)
+Fokus murni pada perancangan arsitektur, pembuatan spesifikasi proyek, flowchart, analisa kebutuhan sistem, dan pembagian tugas sebelum penulisan kode dilakukan.
+
+### 🎨 2. Mode `web` (Master Full-Stack Web Architect)
+Fokus 100% murni pada pembuatan & rekayasa website profesional dari nol:
+- **UI/UX Anti-AI-Slop**: Bento Grids 2.0, Glassmorphism 2.0, Dark Neobrutalism, OKLCH Color Space (WCAG AAA), Framer Motion, WebGL Shaders.
+- **Modern Frontend**: Next.js 14/15 (App Router, RSC, Server Actions), React 19, Vue/Nuxt 3, SvelteKit, Tailwind CSS v4, Radix/Shadcn, Zustand, React Query.
+- **Clean Architecture Backend**: Modular layer (`routes` ➔ `controllers` ➔ `services` ➔ `repositories`), Zod DTO validation, tRPC/OpenAPI, Fastify/Express/Bun/NestJS/FastAPI/Go, WebSockets & SSE.
+- **Database & Optimization**: PostgreSQL, MySQL, SQLite, Redis, Drizzle/Prisma, B-Tree/GIN indexing, Window Functions & CTEs.
+- **OWASP Hardening & DevOps**: Helmet headers, Redis rate-limiting, JWT RS256 rotation, Core Web Vitals (LCP < 1.2s, CLS 0.00, INP < 50ms), Playwright/Jest testing, Multi-stage Dockerfile.
+
+### 💀 3. Mode `bx` (Bxploit Pentest & Offensive Security)
+Fokus 100% murni pada keamanan, penetration testing, vulnerability research, dan offensive security:
+- **Recon & OSINT Speedrun**: Subdomain enumeration (`subfinder`, `amass`), JS/API mining (`katana`, `hakrawler`), path fuzzing (`ffuf`, `dirsearch`), CVE scanning (`nuclei`).
+- **Exploitation & Vulnerabilities**: PHPUnit eval-stdin (CVE-2017-9841), Apache Path Traversal (CVE-2021-41773/42013), SQL Injection (`sqlmap --os-shell`), LFI + Log Poisoning (Apache/SSH), Command Injection, SSRF (AWS/GCP metadata `169.254.169.254`), File Upload bypass & deserialization (PHPGGC/ysoserial), JWT RS256->HS256 key confusion.
+- **WAF Evasion**: Encoding (Double URL/Unicode/Hex), Header spoofing (`X-Forwarded-Host`), HTTP method confusion, WebSocket tunneling (`ws://`).
+- **Post-Exploitation & PrivEsc**: Database credential harvesting (`.env`, `wp-config.php`), MySQL/Postgres dumping, GTFOBins SUID privilege escalation, Dirty Pipe/PwnKit exploits, stealth webshell backdoors & persistence.
 
 ---
 
@@ -31,7 +55,7 @@ Jalankan perintah ini di terminal:
 ```bash
 webcode
 ```
-Tekan **`Tab`** untuk berpindah mode antara **`plan`** ➔ **`WEB`**!
+Tekan **`Tab`** untuk beralih mode antara **`plan`** ➔ **`web`** ➔ **`bx`**!
 
 ---
 
@@ -56,4 +80,4 @@ Setiap modul di folder `knowledge/` berisi panduan mendalam untuk rekayasa web k
 15. `knowledge/pwa-a11y-seo-mastery.md` — PWA Service Workers, Accessibility & Modern SEO.
 
 ---
-*Powered by Bxploit Web Architecture System.*
+*Powered by Bxploit Web & Offensive Security Architecture System.*
