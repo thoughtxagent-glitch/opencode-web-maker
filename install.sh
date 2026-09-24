@@ -2,7 +2,7 @@
 
 set -e
 
-echo "🚀 Installing WEBCODE CLI, Agents (web, bx) & Knowledge Base..."
+echo "🚀 Installing WEBCODE CLI, Agents (web, bx) & Complete Skill Knowledge Base..."
 
 # 1. Create target directories
 CONFIG_DIR="$HOME/.config/opencode"
@@ -94,7 +94,7 @@ for RCFILE in "$HOME/.bashrc" "$HOME/.zshrc" "$HOME/.profile"; do
     fi
 done
 
-echo "✅ SUCCESS! WEBCODE Agents (plan, web, bx) installed successfully!"
+echo "✅ SUCCESS! WEBCODE Agents (plan, web, bx) & Massive Hacking Skill Base installed successfully!"
 echo ""
 echo "📌 Modus Tab Navigation saat 'webcode' dibuka:"
 echo "   Tekan TAB untuk beralih mode ➔ 'plan' ➔ 'web' ➔ 'bx' ('build' disembunyikan!)"
